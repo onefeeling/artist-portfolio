@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Old Souls | Merch</title>
+  </head>
+  <body>
+    
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <a href="landing.html"><img id="logo" src="../../img/logo.png" alt="Old Souls Logo"></a>
+                </div>
+                <div class="col">
+                    <h1>The Old Souls</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#oldSoulsNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="oldSoulsNavbar">
+                <ul class="navbar-nav">
+                    <li id="navLink" class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li id="navLink" class="nav-item"><a class="nav-link" href="#">Merch</a></li>
+                    <li id="navLink" class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="shirtModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Purchase: Yellow Old Souls Shirt</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numTickets" class="col-sm-6 col-form-label">
+                                    Number of Items
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="numItem" id="numItem" onchange="changeShirt(this)">
+                                        <option value="" disable selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">
+                                    Size
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="sizeItem" id="sizeItem">
+                                        <option value="" disable selected>Select...</option>
+                                        <option value="s">Small</option>
+                                        <option value="m">Medium</option>
+                                        <option value="l">Large</option>
+                                        <option value="xl">X-Large</option>
+                                        <option value="xxl">XX-Large</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="price" class="col-sm-6 col-form-label">
+                                    Subtotal: <div id="shirtPrice"></div>
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary text-white" data-dissmiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-success text-white">Checkout</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hoodieModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Purchase: Crimson Old Souls Hoodie</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numTickets" class="col-sm-6 col-form-label">
+                                    Number of Items
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="numItem" id="numItem" onchange="changeHoodie(this)">
+                                        <option value="" disable selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">
+                                    Size
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="sizeItem" id="sizeItem">
+                                        <option value="" disable selected>Select...</option>
+                                        <option value="s">Small</option>
+                                        <option value="m">Medium</option>
+                                        <option value="l">Large</option>
+                                        <option value="xl">X-Large</option>
+                                        <option value="xxl">XX-Large</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="price" class="col-sm-6 col-form-label">
+                                    Subtotal: <div id="hoodiePrice"></div>
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary text-white" data-dissmiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-success text-white">Checkout</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hatModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Purchase:Old Souls Trucker Hat</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times; </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label for="numTickets" class="col-sm-6 col-form-label">
+                                    Number of Items
+                                </label>
+                                <div class="col">
+                                    <select class="form-control" name="numItem" id="numItem" onchange="changeHat(this)">
+                                        <option value="" disable selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="price" class="col-sm-6 col-form-label">
+                                    Subtotal: <div id="hatPrice"></div>
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary text-white" data-dissmiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-success text-white">Checkout</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2>Merch</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 img-wrap">
+                <a data-toggle="modal" data-target="#shirtModal"><img class="d-flex img-img" src="../../img/yellow.png" /> </a>
+                <a data-toggle="modal" data-target="#shirtModal"><h2 class="img-description">Yellow Old Souls Shirt</h2> </a>
+            </div>
+            <div class="col-4 img-wrap">
+                <a data-toggle="modal" data-target="#hatModal"><img class="d-flex img-img" src="../../img/hat.png"/> </a>
+                <a data-toggle="modal" data-target="#hatModal"><h2 class="img-description">Old Souls Trucker Hat</h2> </a>
+            </div>
+            <div class="col-4 img-wrap">
+                <a data-toggle="modal" data-target="#hoodieModal"><img class="d-flex img-img" src="../../img/hoodie.png" /> </a>
+                <a data-toggle="modal" data-targer="#hoodieModal"><h2 class="img-description">Crimson Old Souls Hoodie</h2> </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+                <div class="text-center">
+                   <a class="btn btn-social-icon btn-spotify" href="http://spotify.com/"><i class="fa fa-spotify fa-lg"></i></a>
+                   <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
+                   <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-apple" href="https://www.apple.com/apple-music/"><i class="fa fa-apple fa-lg"></i></a>
+                </div>
+                <div class="text-center">
+                    <a role="button" class="btn btn-link" href="mailto:contact@theoldsouls.co"><i class="fa fa-envelope"></i> contact@theoldsouls.co</a>
+                </div>
+                <div class="text-center" id="copyright">
+                    ©The Old Souls 2021
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
